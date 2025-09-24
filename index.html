@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flower Shop</title>
+<style>
+  body {font-family: Arial, sans-serif; margin:0; padding:20px; background:#fffaf0;}
+  h1 {text-align:center; color:#d6336c;}
+  .products {display:flex; justify-content:center; flex-wrap:wrap; gap:20px;}
+  .card {background:#fff; border:1px solid #ddd; border-radius:10px; width:200px; padding:15px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+  .card img {width:100%; border-radius:10px;}
+  button {background:#d6336c; color:#fff; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;}
+  button:hover {background:#b02a56;}
+  .checkout-link {display:block; text-align:center; margin-top:30px; font-weight:bold; color:#d6336c; text-decoration:none;}
+</style>
+</head>
+<body>
+<h1>🌸 Welcome to Bloom Boutique 🌸</h1>
+
+<div class="products">
+  <div class="card">
+    <img src="https://via.placeholder.com/200x150?text=Roses" alt="Roses">
+    <h3>Red Roses</h3>
+    <p>$15</p>
+    <button onclick="addToCart('Red Roses')">Add to Cart</button>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/200x150?text=Tulips" alt="Tulips">
+    <h3>Colorful Tulips</h3>
+    <p>$12</p>
+    <button onclick="addToCart('Colorful Tulips')">Add to Cart</button>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/200x150?text=Orchids" alt="Orchids">
+    <h3>White Orchids</h3>
+    <p>$20</p>
+    <button onclick="addToCart('White Orchids')">Add to Cart</button>
+  </div>
+</div>
+
+<a class="checkout-link" href="checkout.html">Go to Checkout 🛒</a>
+
+<script>
+function addToCart(item){
+  alert(item + " added to cart!");
+}
+</script>
+</body>
+</html>
