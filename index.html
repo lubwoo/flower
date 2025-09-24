@@ -3,43 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flower Shop</title>
+<title>Bloom Boutique – Flowers</title>
 <style>
-  body {font-family: Arial, sans-serif; margin:0; padding:20px; background:#fffaf0;}
-  h1 {text-align:center; color:#d6336c;}
-  .products {display:flex; justify-content:center; flex-wrap:wrap; gap:20px;}
-  .card {background:#fff; border:1px solid #ddd; border-radius:10px; width:200px; padding:15px; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-  .card img {width:100%; border-radius:10px;}
-  button {background:#d6336c; color:#fff; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;}
-  button:hover {background:#b02a56;}
-  .checkout-link {display:block; text-align:center; margin-top:30px; font-weight:bold; color:#d6336c; text-decoration:none;}
+  :root {
+    --primary:#e63973;
+    --primary-dark:#c82d5f;
+    --accent:#fff0f5;
+    --bg:#f9f9fb;
+    --text:#333;
+  }
+  *{box-sizing:border-box;}
+  body {
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  header {
+    background:var(--primary);
+    color:#fff;
+    padding:1rem 2rem;
+    text-align:center;
+    font-size:1.8rem;
+    font-weight:600;
+    letter-spacing:1px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  }
+  .container {
+    max-width:1100px;
+    margin:2rem auto;
+    padding:0 1rem;
+  }
+  .products {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:2rem;
+  }
+  .card {
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:transform 0.2s ease;
+  }
+  .card:hover {transform:translateY(-5px);}
+  .card img {width:100%; display:block;}
+  .card-content {
+    padding:1rem;
+    text-align:center;
+  }
+  .card h3 {margin:0.5rem 0; font-size:1.3rem; color:var(--primary);}
+  .card p {margin:0.25rem 0 1rem;}
+  button {
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:0.6rem 1.2rem;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:background 0.2s;
+  }
+  button:hover {background:var(--primary-dark);}
+  .checkout-link {
+    display:block;
+    text-align:center;
+    margin:2rem auto;
+    background:var(--primary);
+    color:#fff;
+    padding:0.8rem 1.5rem;
+    width:200px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:background 0.2s;
+  }
+  .checkout-link:hover {background:var(--primary-dark);}
 </style>
 </head>
 <body>
-<h1>🌸 Welcome to Bloom Boutique 🌸</h1>
+<header>🌸 Bloom Boutique</header>
 
-<div class="products">
-  <div class="card">
-    <img src="https://via.placeholder.com/200x150?text=Roses" alt="Roses">
-    <h3>Red Roses</h3>
-    <p>$15</p>
-    <button onclick="addToCart('Red Roses')">Add to Cart</button>
+<div class="container">
+  <h2 style="text-align:center;margin-bottom:2rem;">Fresh Flowers for Every Occasion</h2>
+  <div class="products">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300?text=Red+Roses" alt="Red Roses">
+      <div class="card-content">
+        <h3>Red Roses</h3>
+        <p>$15</p>
+        <button onclick="addToCart('Red Roses')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300?text=Tulips" alt="Tulips">
+      <div class="card-content">
+        <h3>Colorful Tulips</h3>
+        <p>$12</p>
+        <button onclick="addToCart('Colorful Tulips')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300?text=White+Orchids" alt="White Orchids">
+      <div class="card-content">
+        <h3>White Orchids</h3>
+        <p>$20</p>
+        <button onclick="addToCart('White Orchids')">Add to Cart</button>
+      </div>
+    </div>
   </div>
-  <div class="card">
-    <img src="https://via.placeholder.com/200x150?text=Tulips" alt="Tulips">
-    <h3>Colorful Tulips</h3>
-    <p>$12</p>
-    <button onclick="addToCart('Colorful Tulips')">Add to Cart</button>
-  </div>
-  <div class="card">
-    <img src="https://via.placeholder.com/200x150?text=Orchids" alt="Orchids">
-    <h3>White Orchids</h3>
-    <p>$20</p>
-    <button onclick="addToCart('White Orchids')">Add to Cart</button>
-  </div>
+  <a class="checkout-link" href="checkout.html">Proceed to Checkout 🛒</a>
 </div>
-
-<a class="checkout-link" href="checkout.html">Go to Checkout 🛒</a>
 
 <script>
 function addToCart(item){
