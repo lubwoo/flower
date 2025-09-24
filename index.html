@@ -5,91 +5,106 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bloom Boutique – Flowers</title>
 <style>
-  :root {
-    --pink:#f8cde0;
-    --mint:#b6eadc;
-    --lavender:#d9c9ff;
-    --yellow:#ffe9a0;
-    --text:#333;
-    --button:#c78ed1;
-    --button-dark:#b276c0;
-  }
-  *{box-sizing:border-box;}
-  body {
-    margin:0;
-    font-family:'Segoe UI', Tahoma, sans-serif;
-    background:var(--lavender);
-    color:var(--text);
-  }
-  header {
-    background:var(--pink);
-    color:#4b2e4d;
-    padding:1.2rem;
-    text-align:center;
-    font-size:1.8rem;
-    font-weight:700;
-    letter-spacing:1px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.08);
-  }
-  .container {
-    max-width:1100px;
-    margin:2rem auto;
-    padding:0 1rem;
-  }
-  .products {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:2rem;
-  }
-  .card {
-    background:#fffdfc;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 4px 10px rgba(0,0,0,0.08);
-    transition:transform 0.2s;
-  }
-  .card:hover {transform:translateY(-6px);}
-  .card img {width:100%; display:block;}
-  .card-content {
-    padding:1rem;
-    text-align:center;
-  }
-  .card h3 {margin:0.5rem 0; font-size:1.3rem; color:#5e4a72;}
-  .card p {margin:0.25rem 0 1rem;}
-  button {
-    background:var(--button);
-    color:#fff;
-    border:none;
-    padding:0.6rem 1.2rem;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:1rem;
-    transition:background 0.2s;
-  }
-  button:hover {background:var(--button-dark);}
-  .checkout-link {
-    display:block;
-    text-align:center;
-    margin:2rem auto;
-    background:var(--mint);
-    color:#2e4b4b;
-    padding:0.8rem 1.5rem;
-    width:220px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:600;
-    transition:background 0.2s;
-  }
-  .checkout-link:hover {background:#a1dac9;}
+:root {
+  --mint:#c8f2e1;
+  --blush:#f7d0d5;
+  --lavender:#d9ccf1;
+  --accent:#9a89c7;
+  --text:#333;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:"Segoe UI",Tahoma,sans-serif;
+  background:var(--lavender);
+  color:var(--text);
+}
+/* Header with background image */
+header{
+  background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1400&q=80')
+            center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+  padding:4rem 1rem;
+  position:relative;
+}
+header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35); /* soft overlay */
+}
+header h1{
+  position:relative;
+  font-size:3rem;
+  margin:0;
+  z-index:1;
+}
+header p{
+  position:relative;
+  font-size:1.2rem;
+  margin-top:0.5rem;
+  z-index:1;
+}
+.container{
+  max-width:1100px;
+  margin:2rem auto;
+  padding:0 1rem;
+}
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:2rem;
+}
+.card{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:transform 0.2s;
+}
+.card:hover{transform:translateY(-6px);}
+.card img{width:100%; display:block;}
+.card-content{padding:1rem;text-align:center;}
+.card h3{margin:0.5rem 0;color:var(--accent);}
+.card p{margin:0.25rem 0 1rem;font-weight:500;}
+button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:0.6rem 1.2rem;
+  border-radius:6px;
+  font-size:1rem;
+  cursor:pointer;
+  transition:background 0.2s;
+}
+button:hover{background:#8473b0;}
+.checkout-link{
+  display:block;
+  margin:2rem auto;
+  text-align:center;
+  width:220px;
+  padding:0.8rem 1.4rem;
+  background:var(--mint);
+  color:#2f4f4f;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  transition:background 0.2s;
+}
+.checkout-link:hover{background:#b4e5d4;}
 </style>
 </head>
 <body>
-<header>🌸 Bloom Boutique</header>
+
+<header>
+  <h1>Bloom Boutique</h1>
+  <p>Elegant Pastel Flowers for Every Occasion</p>
+</header>
 
 <div class="container">
-  <h2 style="text-align:center;margin-bottom:2rem;">Fresh Flowers in Soft Pastels</h2>
   <div class="products">
-    <div class="card" style="background:var(--mint);">
+    <div class="card">
       <img src="https://via.placeholder.com/400x300?text=Red+Roses" alt="Red Roses">
       <div class="card-content">
         <h3>Red Roses</h3>
@@ -97,7 +112,7 @@
         <button onclick="addToCart('Red Roses')">Add to Cart</button>
       </div>
     </div>
-    <div class="card" style="background:var(--yellow);">
+    <div class="card">
       <img src="https://via.placeholder.com/400x300?text=Tulips" alt="Tulips">
       <div class="card-content">
         <h3>Colorful Tulips</h3>
@@ -105,7 +120,7 @@
         <button onclick="addToCart('Colorful Tulips')">Add to Cart</button>
       </div>
     </div>
-    <div class="card" style="background:var(--pink);">
+    <div class="card">
       <img src="https://via.placeholder.com/400x300?text=White+Orchids" alt="White Orchids">
       <div class="card-content">
         <h3>White Orchids</h3>
