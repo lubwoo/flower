@@ -3,33 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout</title>
+<title>Bloom Boutique – Checkout</title>
 <style>
-  body {font-family: Arial, sans-serif; background:#f0f8ff; padding:20px;}
-  h1 {text-align:center; color:#1e6091;}
-  form {max-width:400px; margin:0 auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-  label {display:block; margin-top:15px;}
-  input, textarea {width:100%; padding:8px; margin-top:5px; border:1px solid #ccc; border-radius:5px;}
-  button {margin-top:20px; width:100%; padding:10px; background:#1e6091; color:#fff; border:none; border-radius:5px; cursor:pointer;}
-  button:hover {background:#144b74;}
-  a {display:block; text-align:center; margin-top:20px; color:#1e6091; text-decoration:none;}
+  :root {
+    --primary:#e63973;
+    --primary-dark:#c82d5f;
+    --bg:#f9f9fb;
+  }
+  body {
+    background:var(--bg);
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    margin:0;
+    padding:0;
+  }
+  header {
+    background:var(--primary);
+    color:#fff;
+    text-align:center;
+    padding:1rem;
+    font-size:1.6rem;
+    font-weight:600;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  }
+  form {
+    max-width:450px;
+    background:#fff;
+    margin:2rem auto;
+    padding:2rem;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  }
+  label {display:block; margin-top:1rem; font-weight:600;}
+  input, textarea {
+    width:100%;
+    padding:0.7rem;
+    margin-top:0.4rem;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:1rem;
+  }
+  button {
+    margin-top:1.5rem;
+    width:100%;
+    padding:0.8rem;
+    background:var(--primary);
+    border:none;
+    border-radius:6px;
+    color:#fff;
+    font-size:1.1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:background 0.2s;
+  }
+  button:hover {background:var(--primary-dark);}
+  a.back {
+    display:block;
+    text-align:center;
+    margin-top:1rem;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+  }
 </style>
 </head>
 <body>
-<h1>Checkout</h1>
+<header>Checkout</header>
+
 <form action="thankyou.html" method="GET">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
+  <label>Name</label>
+  <input type="text" name="name" required>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+  <label>Email</label>
+  <input type="email" name="email" required>
 
-  <label for="address">Address:</label>
-  <textarea id="address" name="address" rows="4" required></textarea>
+  <label>Address</label>
+  <textarea name="address" rows="4" required></textarea>
 
   <button type="submit">Complete Purchase</button>
 </form>
 
-<a href="index.html">← Back to Products</a>
+<a class="back" href="index.html">← Continue Shopping</a>
 </body>
 </html>
