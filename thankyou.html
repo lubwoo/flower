@@ -3,18 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You</title>
+<title>Bloom Boutique – Thank You</title>
 <style>
-  body {font-family: Arial, sans-serif; background:#e6ffe6; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; text-align:center;}
-  h1 {color:#2b9348;}
-  p {font-size:1.2em;}
-  a {margin-top:20px; padding:10px 20px; background:#2b9348; color:#fff; text-decoration:none; border-radius:5px;}
-  a:hover {background:#1f6f34;}
+  :root {
+    --primary:#e63973;
+    --primary-dark:#c82d5f;
+    --bg:#f9f9fb;
+  }
+  body {
+    margin:0;
+    background:var(--bg);
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+  }
+  h1 {
+    color:var(--primary);
+    font-size:2.5rem;
+    margin-bottom:1rem;
+  }
+  p {font-size:1.2rem; max-width:500px;}
+  a {
+    margin-top:2rem;
+    background:var(--primary);
+    color:#fff;
+    padding:0.8rem 1.4rem;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:background 0.2s;
+  }
+  a:hover {background:var(--primary-dark);}
 </style>
 </head>
 <body>
-  <h1>🎉 Thank You for Your Purchase! 🎉</h1>
-  <p>Your beautiful flowers will be delivered soon.</p>
+  <h1>Thank You! 🌸</h1>
+  <p>Your order has been received. We’ll deliver your flowers with love and care.</p>
   <a href="index.html">Back to Home</a>
 </body>
 </html>
