@@ -6,28 +6,30 @@
 <title>Bloom Boutique – Flowers</title>
 <style>
   :root {
-    --primary:#e63973;
-    --primary-dark:#c82d5f;
-    --accent:#fff0f5;
-    --bg:#f9f9fb;
+    --pink:#f8cde0;
+    --mint:#b6eadc;
+    --lavender:#d9c9ff;
+    --yellow:#ffe9a0;
     --text:#333;
+    --button:#c78ed1;
+    --button-dark:#b276c0;
   }
   *{box-sizing:border-box;}
   body {
     margin:0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background:var(--bg);
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    background:var(--lavender);
     color:var(--text);
   }
   header {
-    background:var(--primary);
-    color:#fff;
-    padding:1rem 2rem;
+    background:var(--pink);
+    color:#4b2e4d;
+    padding:1.2rem;
     text-align:center;
     font-size:1.8rem;
-    font-weight:600;
+    font-weight:700;
     letter-spacing:1px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    box-shadow:0 4px 8px rgba(0,0,0,0.08);
   }
   .container {
     max-width:1100px;
@@ -40,54 +42,54 @@
     gap:2rem;
   }
   .card {
-    background:#fff;
-    border-radius:12px;
+    background:#fffdfc;
+    border-radius:14px;
     overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    transition:transform 0.2s ease;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    transition:transform 0.2s;
   }
-  .card:hover {transform:translateY(-5px);}
+  .card:hover {transform:translateY(-6px);}
   .card img {width:100%; display:block;}
   .card-content {
     padding:1rem;
     text-align:center;
   }
-  .card h3 {margin:0.5rem 0; font-size:1.3rem; color:var(--primary);}
+  .card h3 {margin:0.5rem 0; font-size:1.3rem; color:#5e4a72;}
   .card p {margin:0.25rem 0 1rem;}
   button {
-    background:var(--primary);
+    background:var(--button);
     color:#fff;
     border:none;
     padding:0.6rem 1.2rem;
-    border-radius:6px;
+    border-radius:8px;
     cursor:pointer;
     font-size:1rem;
     transition:background 0.2s;
   }
-  button:hover {background:var(--primary-dark);}
+  button:hover {background:var(--button-dark);}
   .checkout-link {
     display:block;
     text-align:center;
     margin:2rem auto;
-    background:var(--primary);
-    color:#fff;
+    background:var(--mint);
+    color:#2e4b4b;
     padding:0.8rem 1.5rem;
-    width:200px;
-    border-radius:8px;
+    width:220px;
+    border-radius:10px;
     text-decoration:none;
     font-weight:600;
     transition:background 0.2s;
   }
-  .checkout-link:hover {background:var(--primary-dark);}
+  .checkout-link:hover {background:#a1dac9;}
 </style>
 </head>
 <body>
 <header>🌸 Bloom Boutique</header>
 
 <div class="container">
-  <h2 style="text-align:center;margin-bottom:2rem;">Fresh Flowers for Every Occasion</h2>
+  <h2 style="text-align:center;margin-bottom:2rem;">Fresh Flowers in Soft Pastels</h2>
   <div class="products">
-    <div class="card">
+    <div class="card" style="background:var(--mint);">
       <img src="https://via.placeholder.com/400x300?text=Red+Roses" alt="Red Roses">
       <div class="card-content">
         <h3>Red Roses</h3>
@@ -95,7 +97,7 @@
         <button onclick="addToCart('Red Roses')">Add to Cart</button>
       </div>
     </div>
-    <div class="card">
+    <div class="card" style="background:var(--yellow);">
       <img src="https://via.placeholder.com/400x300?text=Tulips" alt="Tulips">
       <div class="card-content">
         <h3>Colorful Tulips</h3>
@@ -103,7 +105,7 @@
         <button onclick="addToCart('Colorful Tulips')">Add to Cart</button>
       </div>
     </div>
-    <div class="card">
+    <div class="card" style="background:var(--pink);">
       <img src="https://via.placeholder.com/400x300?text=White+Orchids" alt="White Orchids">
       <div class="card-content">
         <h3>White Orchids</h3>
